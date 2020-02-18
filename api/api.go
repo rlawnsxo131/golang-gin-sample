@@ -7,6 +7,6 @@ import (
 func ApplyRouters(r *gin.Engine) {
 	api := r.Group("/api")
 	{
-		apiv1.ApplyRouters(v1)
+		apiv1.ApplyRouters(api)
 	}
 }
