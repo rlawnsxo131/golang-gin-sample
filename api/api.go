@@ -1,7 +1,12 @@
 package api
 
-import "fmt"
+import (
+	"github.com/gin-gonic/gin"
+)
 
-func api() {
-	fmt.Println("a")
+func ApplyRouters(r *gin.Engine) {
+	api := r.Group("/api")
+	{
+		apiv1.ApplyRouters(v1)
+	}
 }

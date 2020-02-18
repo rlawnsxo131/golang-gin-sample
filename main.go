@@ -1,18 +1,12 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/gin"
+	"github.com/rlawnsxo131/golang-gin-sample/api"
+)
 
 func main() {
-	router := gin.Default()
-
-	v1 := router.Group("/v1")
-	{
-		v1.GET("/hello", func(ctx *gin.Context) {
-			ctx.JSON(200, gin.H{
-				"message": "world",
-			})
-		})
-	}
-
-	router.Run(":3001")
+	app := gin.Default() // create gin app
+	api.ApplyRouters(app)
+	app.Run(":3001")
 }
