@@ -1,4 +1,4 @@
-package apiv1
+package v1
 
 import (
 	"github.com/gin-gonic/gin"
@@ -16,4 +16,5 @@ func ApplyRoutes(r *gin.RouterGroup) {
 	{
 		v1.GET("/ping", ping)
 	}
+	//  http://localhost:3001/api/v1.0/ping
 }

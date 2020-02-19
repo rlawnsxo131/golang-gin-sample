@@ -1,12 +1,14 @@
 package api
 
 import (
+	v1 "gin/api/v1"
+
 	"github.com/gin-gonic/gin"
 )
 
-func ApplyRouters(r *gin.Engine) {
+func ApplyRoutes(r *gin.Engine) {
 	api := r.Group("/api")
 	{
-		apiv1.ApplyRouters(api)
+		v1.ApplyRoutes(api)
 	}
 }
